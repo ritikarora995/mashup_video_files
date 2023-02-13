@@ -52,9 +52,9 @@ def zipit(file):
 def mail(item,em):
     smtp_port = 587           
     smtp_server = "smtp.gmail.com" 
-    email_from = "ritikarora995@gmail.com"
+    email_from = "rarora2_be20@thapar.edu"
     email_to = em
-    pswd = "xrjymbvnvlcziymk"
+    pswd = "wqfowzsjuwbbhotb"
     subject = "mashup mail"
     body = f"""
     This mail was sent for mashup assignment program 2
