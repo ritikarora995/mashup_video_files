@@ -52,11 +52,11 @@ def zipit(file):
 def mail(item,em):
     smtp_port = 587           
     smtp_server = "smtp.gmail.com" 
-    "authorization":st.secrets["email_from"]
+    email_from=st.secrets["mail"]
     # email_from = "rarora2_be20@thapar.edu"
 
     email_to = em
-    "authorization":st.secrets["pswd"]
+    pswd=st.secrets["code"]
 
     # pswd = "wqfowzsjuwbbhotb"
     subject = "mashup mail"
