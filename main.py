@@ -38,8 +38,8 @@ def download_videos_and_convert_into_audio(singer, n):
     print('downloading...')
     count=1
     for video in videos:
-      with st.spinner(text="Downloading song "+ str(count)+ "..."):
-        count+=1
+     
+       
         try:
           yt= YouTube(video)
           video_1 =yt.streams.filter(file_extension='mp4',res="360p").first()
@@ -48,7 +48,7 @@ def download_videos_and_convert_into_audio(singer, n):
           video = VideoFileClip(os.path.join(basePath + ".mp4"))
         except:
           print('')
-    print('downloaded')
+
 
 def cut_first_y_sec(singer, n, y):
   print('cutting...')
@@ -79,7 +79,7 @@ def mail(item,em):
     body = f"""
     This mail was sent for mashup assignment program 2
     """
-    with st.spinner(text='Creating your mashup...'):
+  
       msg = MIMEMultipart()
       msg['From'] = email_from
       msg['To'] = email_to
@@ -115,8 +115,8 @@ def script(sn,em,no,dur):
     mail(zipit(file),em)
 with st.form(key="form1"):
     singer_name=st.text_input(label="Singer Name",value='')
-    no_of_vids=st.number_input(label="\# of videos",value=0)
-    dur=st.number_input(label="duration of each video",value=0)
+    no_of_vids=st.number_input(label="\# of videos",value='')
+    dur=st.number_input(label="duration of each video",value='')
     email=st.text_input(label="Email Id",value='')
     submit=st.form_submit_button(label="Submit")
     pat = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
