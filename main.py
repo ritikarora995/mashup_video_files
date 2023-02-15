@@ -103,7 +103,7 @@ def mail(item,em):
       print(f"Email sent to: {email_to}")
       print()
       TIE_server.quit()
-    st.success('Success! Your mashup will shortly arrive in your mailbox :)')
+      st.success('Success! Your mashup will shortly arrive in your mailbox :)')
 def script(sn,em,no,dur):
     singer = sn
     n = no
